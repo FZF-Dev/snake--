@@ -128,14 +128,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Snake--.cpp" />
+    <ClCompile Include="SnakeMinusMinusEntity.cpp" />
     <ClCompile Include="SnakeMinusMinusGame.cpp" />
     <ClCompile Include="SnakeMinusMinusMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SnakeMinusMinusConsoleOperations.h" />
+    <ClInclude Include="SnakeMinusMinusEntity.h" />
     <ClInclude Include="SnakeMinusMinusEntitySymbols.h" />
     <ClInclude Include="SnakeMinusMinusGame.h" />
     <ClInclude Include="SnakeMinusMinusMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Snake--.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

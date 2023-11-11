@@ -24,6 +24,9 @@
     <ClCompile Include="SnakeMinusMinusMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SnakeMinusMinusEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SnakeMinusMinusGame.h">
@@ -38,5 +41,13 @@
     <ClInclude Include="SnakeMinusMinusConsoleOperations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SnakeMinusMinusEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Snake--.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
