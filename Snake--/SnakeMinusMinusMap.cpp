@@ -1,5 +1,6 @@
 #include "SnakeMinusMinusMap.h"
 #include "SnakeMinusMinusEntitySymbols.h"
+#include "SnakeMinusMinusConsoleOperations.h"
 
 
 SnakeMinusMinusMap::SnakeMinusMinusMap(const int heigthOfMap, const int widthOfMap)
@@ -20,7 +21,9 @@ void SnakeMinusMinusMap::render()
 		}
 		toRender += '\n';
 	}
-	system("CLS");
+	
+	consoleutils::cls();
+
 	std::cout << toRender;
 }
 
@@ -37,9 +40,9 @@ void SnakeMinusMinusMap::initMapWithWalls(const int heigthOfMap, const int width
 
 	for(int i = 0; i < heigthOfMap; i++)
 	{
-		vector<char> currentLine = map.at(i);
+		vector<char>& currentLine = map.at(i);
 		
-		if (i == 0 || i == map.size())
+		if (i == 0 || i == map.size() - 1)
 			initFullWallLine(currentLine, widthOfMap);
 		else
 			initMiddleLine(currentLine, widthOfMap);
@@ -47,22 +50,20 @@ void SnakeMinusMinusMap::initMapWithWalls(const int heigthOfMap, const int width
 }
 
 
-void SnakeMinusMinusMap::initFullWallLine(vector<char> line, const int widthOfMap)
+void SnakeMinusMinusMap::initFullWallLine(vector<char>& line, const int widthOfMap)
 {
-	line = vector<char>(widthOfMap, ENTITY_SYMBOLS::WALL);
+	line = vector<char>(widthOfMap, entitysymbols::WALL);
 }
 
 
-void SnakeMinusMinusMap::initMiddleLine(vector<char> line, const int widthOfMap)
+void SnakeMinusMinusMap::initMiddleLine(vector<char>& line, const int widthOfMap)
 {
-	int firstSymbolIndex = 0;
-	int lastSymbolIndex = widthOfMap - 1;
-
-	line.at(firstSymbolIndex) = ENTITY_SYMBOLS::WALL;
-	line.at(lastSymbolIndex) = ENTITY_SYMBOLS::WALL;
-
-	for(int i = firstSymbolIndex + 1; i < lastSymbolIndex; i++)
+	line.push_back(entitysymbols::WALL);
+	
+	for(int i = 1; i < widthOfMap - 1; i++)
 	{
-		line.at(i) = ENTITY_SYMBOLS::EMPTY;
+		line.push_back(entitysymbols::EMPTY);
 	}
+	
+	line.push_back(entitysymbols::WALL);
 }

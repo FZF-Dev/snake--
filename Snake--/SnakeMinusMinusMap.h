@@ -31,9 +31,9 @@ public:
 
 	void initMapWithWalls(const int heigthOfMap, const int widthOfMap);
 
-	void initFullWallLine(vector<char> line, const int widthOfMap);
+	void initFullWallLine(vector<char>& line, const int widthOfMap);
 
-	void initMiddleLine(vector<char> line, const int widthOfMap);
+	void initMiddleLine(vector<char>& line, const int widthOfMap);
 };
 
 

@@ -2,7 +2,7 @@
 #define SNAKE_MINUS_MINUS_ENTITIES
 
 
-namespace ENTITY_SYMBOLS
+namespace entitysymbols
 {
 	char EMPTY = ' ';
 	char WALL = '#';

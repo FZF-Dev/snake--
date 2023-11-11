@@ -35,5 +35,8 @@
     <ClInclude Include="SnakeMinusMinusEntitySymbols.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SnakeMinusMinusConsoleOperations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

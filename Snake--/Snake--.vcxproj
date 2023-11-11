@@ -132,6 +132,7 @@
     <ClCompile Include="SnakeMinusMinusMap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SnakeMinusMinusConsoleOperations.h" />
     <ClInclude Include="SnakeMinusMinusEntitySymbols.h" />
     <ClInclude Include="SnakeMinusMinusGame.h" />
     <ClInclude Include="SnakeMinusMinusMap.h" />

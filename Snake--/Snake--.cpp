@@ -14,6 +14,7 @@ int main()
         //fwrite(message, sizeof(char), strlen(message), stdout);
 
         std::unique_ptr<SnakeMinusMinusMap> map = std::make_unique<SnakeMinusMinusMap>(40, 40);
+        map->render();
 
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
