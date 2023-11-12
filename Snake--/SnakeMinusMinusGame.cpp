@@ -1,6 +1,12 @@
 #include "SnakeMinusMinusGame.h"
 
 
+SnakeMinusMinusGame::SnakeMinusMinusGame()
+{
+	this->foodItems = vector<unique_ptr<SnakeMinusMinusEntity>>();
+}
+
+
 void SnakeMinusMinusGame::start()
 {
 	SnakeMinusMinusGame::gameIsRunning = true;

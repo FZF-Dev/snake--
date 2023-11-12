@@ -28,7 +28,13 @@ void SnakeMinusMinusMap::render()
 }
 
 
-void SnakeMinusMinusMap::drawEntity()
+void SnakeMinusMinusMap::addEntity(SnakeMinusMinusEntity& entity)
+{
+
+}
+
+
+void SnakeMinusMinusMap::drawEntity(SnakeMinusMinusEntity& entity)
 {
 
 }

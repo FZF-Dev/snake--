@@ -1,6 +1,8 @@
 #ifndef SNAKE_MINUS_MINUS_MAP
 #define SNAKE_MINUS_MINUS_MAP
 
+#include "SnakeMinusMinusEntity.h"
+
 #include <iostream>
 #include <string>
 #include <memory>
@@ -18,16 +20,18 @@ private:
 
 	const int widthOfMap;
 
+	vector<vector<char>> map;
+
 	SnakeMinusMinusMap();
 
-	vector<vector<char>> map;
+	void drawEntity(SnakeMinusMinusEntity& entity);
 
 public:
 	SnakeMinusMinusMap(const int heigthOfMap, const int widthOfMap);
 
 	void render();
 
-	void drawEntity();
+	void addEntity(SnakeMinusMinusEntity& entity);
 
 	void initMapWithWalls(const int heigthOfMap, const int widthOfMap);
 
